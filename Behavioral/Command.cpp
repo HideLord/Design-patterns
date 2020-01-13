@@ -62,9 +62,9 @@ class Person
 };
 
 int main(){
-  Person wilma("Wilma", Command());
-  Person betty("Betty", Command(&wilma, &Person::listen));
-  Person barney("Barney", Command(&betty, &Person::gossip));
-  Person fred("Fred", Command(&barney, &Person::passOn));
-  fred.talk();
+    Person wilma("Wilma", Command());
+    Person betty("Betty", Command(&wilma, &Person::listen));
+    Person barney("Barney", Command(&betty, &Person::gossip));
+    Person fred("Fred", Command(&barney, &Person::passOn));
+    fred.talk();
 }
